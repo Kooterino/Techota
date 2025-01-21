@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Techota - Our Services</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">TECH<span>OTA</span></a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="products.html">Products</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <i class="fas fa-bars mobile-menu"></i>
+        </nav>
+    </header>
+
+    <main>
+		<section class="services-container">
+			<h2>Computer Repair Services</h2>
+			
+			<!-- Pre-made Package -->
+			<div class="service-package highlighted">
+				<h3>Complete Computer Repair Package <span class="price">$149</span></h3>
+				<ul class="breakdown">
+					<li>✓ Comprehensive Diagnostic Scan ($30)</li>
+					<li>✓ Hardware Cleaning & Optimization ($40)</li>
+					<li>✓ Virus/Malware Removal ($60)</li>
+					<li>✓ Operating System Reinstallation ($40)</li>
+					<li>✓ 1 Month Warranty (Free)</li>
+				</ul>
+				<button class="btn package-btn">Choose Package</button>
+			</div>
+
+			<!-- Custom Service Builder -->
+			<div class="custom-services">
+				<h3>Build Your Own Repair Plan</h3>
+				
+				<div class="service-option">
+					<label>
+						<input type="checkbox" class="service-checkbox" data-price="30">
+						Diagnostic Scan - $30
+					</label>
+					<p>Identify hardware/software issues</p>
+				</div>
+
+				<div class="service-option">
+					<label>
+						<input type="checkbox" class="service-checkbox" data-price="40">
+						Hardware Cleaning - $40
+					</label>
+					<p>Full interior cleaning & thermal paste replacement</p>
+				</div>
+
+				<div class="service-option">
+					<label>
+						<input type="checkbox" class="service-checkbox" data-price="60">
+						Virus Removal - $60
+					</label>
+					<p>Complete malware removal & protection setup</p>
+				</div>
+
+				<div class="service-option">
+					<label>
+						<input type="checkbox" class="service-checkbox" data-price="40">
+						OS Installation - $40
+					</label>
+					<p>Windows/Linux installation with drivers</p>
+				</div>
+
+				<div class="total-section">
+					<h4>Selected Services Total: <span id="total-price">$0</span></h4>
+					<button class="btn" id="checkout-btn">Schedule Repair</button>
+				</div>
+			</div>
+		</section>
+    </main>
+
+	<footer class="main-footer">
+		<div class="footer-links">
+			<div class="footer-section">
+				<h4>Navigation</h4>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="services.html">Services</a></li>
+					<li><a href="products.html">Products</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="about.html">About Techota</a></li>
+					<li><a href="disclaimer.html">Disclaimer</a></li>
+				</ul>
+			</div>
+			
+			<div class="footer-section">
+				<h4>Connect</h4>
+				<ul>
+					<li><a href="#"><i class="fab fa-facebook"></i> Facebook</a></li>
+					<li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+					<li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<div class="copyright">
+			<p>© 2025 Techota - Tech Repairs Simplified</p>
+		</div>
+	</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+/* === Base Styles === */
+:root {
+    --cream: #F5F1ED;
+    --slate: #3A3335;
+    --beige: #D4B483;
+    --mocha: #6B4F4F;
+    --sage: #2C5530;
+    --transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    background: var(--cream);
+    color: var(--slate);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+    padding-top: 100px;
+}
+
+/* === Header/Nav === */
+header {
+    background: var(--slate);
+    padding: 1rem 2rem;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+}
+
+nav {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    color: var(--cream);
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: -1px;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.logo:hover {
+    transform: scale(1.05);
+    opacity: 0.95;
+}
+
+.logo span {
+    color: var(--beige);
+    transition: color 0.3s ease;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-links a {
+    color: var(--cream);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    color: var(--beige);
+    transform: translateY(-2px);
+}
+
+.mobile-menu {
+    display: none;
+    color: var(--cream);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* === Common Page Styles === */
+.hero {
+    padding: 6rem 2rem;
+    background: linear-gradient(45deg, rgba(58,51,53,0.95) 0%, rgba(43,43,43,0.9) 100%),
+                url('images/hero-bg.jpg') center/cover;
+    text-align: center;
+    color: var(--cream);
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--sage);
+    color: white !important;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: var(--transition);
+    margin: 1rem;
+    font-weight: 600;
+    border: 2px solid transparent;
+}
+
+.btn:hover {
+    background: var(--mocha);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* === Footer Styles === */
+.main-footer {
+    background: var(--slate);
+    color: var(--cream);
+    padding: 3rem 2rem;
+    margin-top: auto;
+}
+
+.footer-links {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+    padding-bottom: 2rem;
+}
+
+.footer-section h4 {
+    color: var(--beige);
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-section a {
+    color: var(--cream);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-section a:hover {
+    color: var(--beige);
+    padding-left: 5px;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid var(--mocha);
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+/* === Mobile Styles === */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--slate);
+        flex-direction: column;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+}
+
+/* === Page Specific Styles === */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css');
+
+/* Services Page */
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Products Page */
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Contact Page */
+.contact-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 3rem;
+}
+
+/* About Page */
+.about-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+/* Disclaimer Page */
+.disclaimer-content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
